@@ -8,7 +8,6 @@ function readFormData(form) {
 }
 
 form.addEventListener('input', (event) => {
-    event.preventDefault();
     const data = readFormData(event.currentTarget);
     const jsonData = JSON.stringify(data);
     localStorage.setItem(STORAGE_KEY, jsonData);
@@ -26,7 +25,7 @@ form.addEventListener('submit', (event) => {
     const email = form.email.value
     const message = form.message.value;
     
-    if (email && message !== '') {
+    if (email !== '' && message !== '') {
     const dataConsole = readFormData(event.currentTarget);
     console.log(dataConsole);
     localStorage.removeItem(STORAGE_KEY);
