@@ -10,8 +10,7 @@
     grid-auto-rows: 240px;
     grid-gap: 12px;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
 }
 
 .gallery-item {
